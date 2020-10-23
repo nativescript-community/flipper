@@ -1,0 +1,31 @@
+{
+    "name": "@nativescript-community/flipper",
+    "version": "1.0.7",
+    "main": "./flipper",
+    "typings": "./flipper.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/@nativescript-community/flipper.git"
+    },
+    "nativescript": {
+        "platforms": {
+            "android": "5.3.1",
+            "ios": "5.3.1"
+        }
+    },
+    "keywords": [
+        "NativeScript",
+        "JavaScript",
+        "Android",
+        "iOS"
+    ],
+    "author": {
+        "name": "Martin Guillon",
+        "email": "martin@akylas.fr"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/@nativescript-community/flipper/issues"
+    },
+    "homepage": "https://github.com/@nativescript-community/flipper#readme"
+}
