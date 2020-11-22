@@ -1,12 +1,13 @@
 {
     "name": "@nativescript-community/flipper",
     "version": "0.0.2",
+    "description": "A desktop debugging platform for mobile developers.",
     "main": "./flipper",
     "typings": "./flipper.d.ts",
     "sideEffects": false,
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/@nativescript-community/flipper.git"
+        "url": "https://github.com/nativescript-community/flipper"
     },
     "nativescript": {
         "platforms": {
@@ -18,7 +19,9 @@
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "iOS",
+        "Vue",
+        "preview|https://raw.githubusercontent.com/nativescript-community/flipper/master/images/demo-android.gif"
     ],
     "author": {
         "name": "Martin Guillon",
@@ -27,6 +30,5 @@
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/@nativescript-community/flipper/issues"
-    },
-    "homepage": "https://github.com/@nativescript-community/flipper#readme"
+    }
 }
