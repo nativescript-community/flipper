@@ -1,5 +1,5 @@
-flipperkit_version = '00.49.0'
-platform :ios, '9.0'
+flipperkit_version = '00.127.0'
+platform :ios, '10.0'
 use_frameworks!
 
 # It is likely that you'll only want to include Flipper in debug builds,

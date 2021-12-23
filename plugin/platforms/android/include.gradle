@@ -1,6 +1,11 @@
 dependencies {
-  debugImplementation 'com.facebook.flipper:flipper:0.63.0'
-  debugImplementation 'com.facebook.soloader:soloader:0.9.0'
-
-  releaseImplementation 'com.facebook.flipper:flipper-noop:0.63.0'
+	def soloaderVersion =  project.hasProperty("soloaderVersion") ? project.soloaderVersion : "0.10.1"
+	def flipperVersion =  project.hasProperty("flipperVersion") ? project.flipperVersion : "0.127.0"
+	def leakCanaryVersion =  project.hasProperty("leakCanaryVersion") ? project.leakCanaryVersion : "2.6"
+  debugImplementation "com.facebook.flipper:flipper:$flipperVersion"
+  debugImplementation "com.facebook.soloader:soloader:$soloaderVersion"
+  debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipperVersion"
+  debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+  debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipperVersion"
+  debugImplementation "com.facebook.flipper:flipper-fresco-plugin:$flipperVersion"
 }

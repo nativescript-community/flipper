@@ -7,8 +7,12 @@ export abstract class BaseNative<T, U extends {}> {
     createNative();
 }
 
+export interface Plugin {
+    install(client);
+}
+
 export interface ConfigurationOptions {
-    plugins?:string[]
+    plugins?:(string | Plugin)[]
 }
 
 export class Client {

@@ -11,11 +11,19 @@ export class Client extends ClientBase {
         
                 const plugins = (this.config && this.config.plugins) || [];
                 plugins.forEach(s => {
+                    if (!(typeof s === 'string') && s.install) {
+                        try {
+                            s.install(client);
+
+                        } catch(err) {
+                            console.error(err);
+                        }
+                    }
                     switch (s) {
                         case 'network':
                             client.addPlugin(FlipperKitNetworkPlugin.alloc().initWithNetworkAdapter(SKIOSNetworkAdapter.new()));
                             break;
-                        case 'inspector':
+                        case 'layout':
                             client.addPlugin(FlipperKitLayoutPlugin.alloc().initWithRootNodeWithDescriptorMapper(Application.ios.nativeApp, layoutDescriptorMapper));
                             break;
                         // case 'database':
