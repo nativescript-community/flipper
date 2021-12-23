@@ -47,6 +47,7 @@ export class Client extends ClientBase {
                             client.addPlugin(com.facebook.flipper.plugins.crashreporter.CrashReporterPlugin.getInstance());
                             break;
                         case 'image':
+                            //@ts-ignore
                             const leakTracker = new com.facebook.imagepipeline.debug.FlipperCloseableReferenceLeakTracker();
                             try {
                                 const initialize = require('@nativescript-community/ui-image').initialize;
@@ -54,9 +55,12 @@ export class Client extends ClientBase {
                             }catch(err) {
                                 console.error('error installing image plugin', err);
                             }
+                            //@ts-ignore
                             client.addPlugin(new com.facebook.flipper.plugins.fresco.FrescoFlipperPlugin(
-                                new com.facebook.imagepipeline.debug.FlipperImageTracker(), 
-                                com.facebook.drawee.backends.pipeline.Fresco.getImagePipelineFactory().getPlatformBitmapFactory(), 
+                            //@ts-ignore
+                            new com.facebook.imagepipeline.debug.FlipperImageTracker(), 
+                            //@ts-ignore
+                            com.facebook.drawee.backends.pipeline.Fresco.getImagePipelineFactory().getPlatformBitmapFactory(), 
                                 null, 
                                 new com.facebook.common.memory.manager.NoOpDebugMemoryManager(),
                                 new com.facebook.flipper.perflogger.NoOpFlipperPerfLogger(),
@@ -65,13 +69,17 @@ export class Client extends ClientBase {
                             break;
                         case 'leakCanary':
                             try {
-                                const config = leakcanary.LeakCanary.getConfig().newBuilder()
-                                    .onHeapAnalyzedListener(new com.facebook.flipper.plugins.leakcanary2.FlipperLeakListener())
+                            //@ts-ignore
+                            const config = leakcanary.LeakCanary.getConfig().newBuilder()
+                            //@ts-ignore
+                            .onHeapAnalyzedListener(new com.facebook.flipper.plugins.leakcanary2.FlipperLeakListener())
                                     .build();
-                                leakcanary.LeakCanary.setConfig(config);
+                            //@ts-ignore
+                            leakcanary.LeakCanary.setConfig(config);
                             }catch(err) {
                                 console.error('error installing leak plugin', err);
                             }
+                            //@ts-ignore
                             client.addPlugin(new com.facebook.flipper.plugins.leakcanary2.LeakCanary2FlipperPlugin());
                             break;
                         case 'navigation':
