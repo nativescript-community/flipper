@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/nativescript-community/flipper/compare/v0.0.5...v0.0.6) (2021-12-23)
+
+
+### Bug Fixes
+
+* updated android and deps ([018e676](https://github.com/nativescript-community/flipper/commit/018e676e042e799b085d5e00cfdaff82d91ac235))
+
+
+
+
+
 ## [0.0.5](https://github.com/nativescript-community/flipper/compare/v0.0.4...v0.0.5) (2020-11-23)
 
 **Note:** Version bump only for package @nativescript-community/flipper
