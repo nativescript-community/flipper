@@ -4,31 +4,29 @@
     "readme": "README.md",
     "repository": "http://www.github.com/@nativescript-community/flipper.git",
     "dependencies": {
-        "@nativescript/core": "7.0.12",
         "@nativescript-community/flipper": "file:../plugin",
-        "nativescript-vue": "2.8.1",
-        "tslib": "^2.0.3",
+        "@nativescript-community/https": "3.3.3",
+        "@nativescript-community/ui-image": "4.1.1",
+        "@nativescript/core": "8.1.5",
+        "nativescript-vue": "2.9.0",
         "vue-class-component": "^7.2.6"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.3",
+        "@babel/core": "^7.16.5",
         "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-        "@babel/preset-env": "^7.12.1",
-        "@nativescript/ios": "7.0.4",
-        "@nativescript/types": "7.0.4",
-        "@nativescript/webpack": "3.0.8",
-        "babel-loader": "8.1.0",
-        "nativescript-vue-template-compiler": "2.8.1",
-        "sass": "^1.27.0",
-        "sass-loader": "10.0.4",
-        "typescript": "^3.9.7",
-        "vue": "2.6.12",
-        "vue-loader": "^15.9.3",
-        "vue-property-decorator": "^8.5.1",
-        "webpack-strip-block": "^0.3.0"
+        "@babel/preset-env": "^7.16.5",
+        "@nativescript/android": "8.1.1",
+        "@nativescript/ios": "8.1.0",
+        "@nativescript/types": "8.1.1",
+        "@nativescript/webpack": "5.0.3",
+        "babel-loader": "8.2.3",
+        "nativescript-vue-template-compiler": "2.9.0",
+        "sass": "^1.45.1",
+        "sass-loader": "12.4.0",
+        "typescript": "^4.5.4",
+        "vue": "2.6.14",
+        "vue-loader": "^15.9.8",
+        "vue-property-decorator": "^9.1.2"
     },
-    "scripts": {
-        "tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**'"
-    },
-    "main": "main.js"
+    "main": "app/main"
 }

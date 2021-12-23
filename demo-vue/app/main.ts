@@ -1,22 +1,16 @@
 import Vue from 'nativescript-vue';
 
 import { Client } from '@nativescript-community/flipper';
+import ImageVuePlugin  from '@nativescript-community/ui-image/vue';
+import {initialize}  from '@nativescript-community/ui-image';
 
+Vue.use(ImageVuePlugin);
 const client  = new Client();
 client.start({
-    plugins:['inspector', 'network', 'prefs']
+    plugins:['layout', 'network', 'prefs', 'crash', 'database', 'leakCanary', 'image']
 });
-// const bugsnag = (Vue.prototype.$bugsnag = new Client());
-// bugsnag
-//     .init('c2bac2381b9fed37bfa37453e71a0ea9')
-//     .then(res => {
-//         bugsnag.enableConsoleBreadcrumbs();
-//         bugsnag.handleUncaughtErrors();
-//         console.log('bugsnag did init', !!res);
-//     })
-//     .catch(err => {
-//         console.log('bugsnag  init failed', err);
-//     });
+// make sure to call it after client.start
+initialize();
 import Home from './views/Home';
 new Vue({
     render: h => {
